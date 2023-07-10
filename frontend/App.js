@@ -3,10 +3,10 @@ import axios from "axios";
 
 import Charts from "./components/Charts";
 import Navbar from "./components/Navbar";
-
+import useDarkMode from "./hooks/geceModuAc";
 const App = () => {
   const [coinData, setCoinData] = useState([]);
-  const [geceModu, setGeceModu] = useState(false);
+  const [geceModu, setGeceModu] = useDarkMode(false);
 
   useEffect(() => {
     axios
